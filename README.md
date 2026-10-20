@@ -1,4 +1,4 @@
-# Hi, I'm Kamohelo Moorosi! 👋
+# Hi, I'm Kamohelo Moorosi! 
 
 ### Aspiring Software Developer | Software Development Student
 
