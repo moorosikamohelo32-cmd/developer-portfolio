@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kamohelo Moorosi | Aspiring Software Developer</title>
+<meta name="description" content="Portfolio of Kamohelo Moorosi, a Software Development student at CTU Training Solutions building practical web and database applications.">
+<meta property="og:title" content="Kamohelo Moorosi | Aspiring Software Developer">
+<meta property="og:description" content="Projects, skills and education of a junior software developer.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=DM+Sans:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav">
+  <a href="#home" class="logo">&lt;KM /&gt;</a>
+  <button class="burger" aria-label="Toggle menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+  <nav id="menu" aria-label="Main">
+    <a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#education">Education</a><a href="#contact">Contact</a>
+    <button class="theme" aria-label="Toggle dark and light mode">◐</button>
+  </nav>
+</header>
+
+<main id="main">
+<section id="home" class="hero">
+  <div class="hero-text">
+    <p class="hello">Hi, I'm</p>
+    <h1>Kamohelo Moorosi</h1>
+    <p class="role">Aspiring <span id="typed"></span><span class="caret" aria-hidden="true"></span></p>
+    <p class="lead">I'm a passionate software development student who enjoys building practical digital solutions, learning new technologies, and turning ideas into working applications.</p>
+    <div class="btns">
+      <a class="btn primary" href="#projects">View My Work</a>
+      <a class="btn" href="#contact">Contact Me</a>
+      <a class="btn ghost" data-link="cv" download>Download CV</a>
+    </div>
+  </div>
+  <div class="hero-side">
+    <img class="avatar" src="images/profile.jpg" alt="Portrait of Kamohelo Moorosi" width="320" height="320" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 320 320%22%3E%3Crect width=%22320%22 height=%22320%22 fill=%22%231a1a2e%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 fill=%22%238b8bff%22 font-family=%22monospace%22 font-size=%2218%22 text-anchor=%22middle%22%3EReplace images/profile.jpg%3C/text%3E%3C/svg%3E'">
+    <pre class="term" aria-hidden="true"><code><b>const</b> kamohelo = {
+  studying: <i>"Software Development"</i>,
+  at: <i>"CTU Training Solutions"</i>,
+  graduating: 2027,
+  status: <i>"learning, building"</i>
+};</code></pre>
+  </div>
+</section>
+
+<section id="about" class="sec split">
+  <img src="images/about.jpg" alt="Kamohelo working or relaxing outside of coding" width="420" height="480" loading="lazy" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 420 480%22%3E%3Crect width=%22420%22 height=%22480%22 fill=%22%231a1a2e%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 fill=%22%238b8bff%22 font-family=%22monospace%22 font-size=%2216%22 text-anchor=%22middle%22%3EReplace images/about.jpg%3C/text%3E%3C/svg%3E'">
+  <div>
+    <h2>About me</h2>
+    <p>I'm studying Software Development at CTU Training Solutions, working towards a career as a software developer. I like understanding how things work, then building them myself.</p>
+    <ul class="ticks">
+      <li>Building software and websites</li>
+      <li>Databases and application development</li>
+      <li>Solving problems through technology</li>
+      <li>Learning something new every week</li>
+    </ul>
+    <h3>Beyond coding</h3>
+    <p>Anime and Marvel keep me inspired, and I used to skateboard. Skating taught me to fall, adjust and try the trick again, which is how I approach debugging too.</p>
+  </div>
+</section>
+
+<section id="skills" class="sec">
+  <h2>Skills and technologies</h2>
+  <div id="skills-grid"></div>
+</section>
+
+<section id="projects" class="sec">
+  <h2>Projects</h2>
+  <div id="project-grid" class="grid"></div>
+</section>
+
+<section id="education" class="sec">
+  <h2>Education and journey</h2>
+  <ol id="timeline" class="timeline"></ol>
+  <h3>More to come</h3>
+  <div id="extras" class="grid small"></div>
+</section>
+
+<section id="github" class="sec gh">
+  <h2>Find my code on GitHub</h2>
+  <p>Recruiters: my repositories show how I write, structure and document code.</p>
+  <a class="btn primary" data-link="github" target="_blank" rel="noopener">github.com/<span data-text="username"></span></a>
+  <img id="gh-graph" class="graph" alt="GitHub contribution activity graph" loading="lazy" hidden>
+</section>
+
+<section id="contact" class="sec">
+  <h2>Contact</h2>
+  <div class="split">
+    <form id="form" novalidate>
+      <label>Name<input name="name" autocomplete="name" required></label><small class="err" data-for="name"></small>
+      <label>Email<input name="email" type="email" autocomplete="email" required></label><small class="err" data-for="email"></small>
+      <label>Subject<input name="subject" required></label><small class="err" data-for="subject"></small>
+      <label>Message<textarea name="message" rows="5" required minlength="10"></textarea></label><small class="err" data-for="message"></small>
+      <button class="btn primary" type="submit">Send Message</button>
+      <p id="status" role="status"></p>
+    </form>
+    <div class="socials">
+      <p>Prefer a direct line? Reach me here:</p>
+      <a data-link="github" target="_blank" rel="noopener">GitHub</a>
+      <a data-link="linkedin" target="_blank" rel="noopener">LinkedIn</a>
+      <a data-link="email">Email</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div><strong>Kamohelo Moorosi</strong><p>Building, learning and creating with technology.</p></div>
+  <div class="socials row"><a data-link="github" target="_blank" rel="noopener">GitHub</a><a data-link="linkedin" target="_blank" rel="noopener">LinkedIn</a><a data-link="email">Email</a></div>
+  <small>&copy; <span id="year"></span> Kamohelo Moorosi. All rights reserved.</small>
+</footer>
+
+<dialog id="modal" aria-labelledby="m-title"><button class="close" aria-label="Close project details">✕</button><div id="m-body"></div></dialog>
+<script src="js/script.js"></script>
+</body>
+</html>
